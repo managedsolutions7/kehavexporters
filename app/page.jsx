@@ -15,8 +15,8 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-import MyClients from "./components/myclients";
-import WhoWeAre from "./components/WhoWeAre";
+import MyClients from "@/components/MyClients";
+import WhoWeAre from "@/components/WhoWeAre";
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
 
