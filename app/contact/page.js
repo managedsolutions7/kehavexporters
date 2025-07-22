@@ -1,15 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Globe,
-  Clock,
-  Shield,
-  CheckCircle,
-} from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -54,27 +44,27 @@ const ContactSection = () => {
 
   const contactInfo = [
     {
-      icon: Phone,
+      icon: "📞",
       title: "Phone",
       value: "+91-7900472933",
       link: "tel:+91-7900472933",
       description: "Available 9 AM - 6 PM IST",
     },
     {
-      icon: Mail,
+      icon: "✉️",
       title: "Email",
       value: "Keshavexporters123@gmail.com",
       link: "mailto:Keshavexporters123@gmail.com",
       description: "We respond within 24 hours",
     },
     {
-      icon: MapPin,
+      icon: "📍",
       title: "Address",
       value: "Khurja, Uttar Pradesh, India",
       description: "Our headquarters & distribution center",
     },
     {
-      icon: Globe,
+      icon: "🌍",
       title: "Global Reach",
       value: "65+ Countries Served",
       description: "Worldwide pharmaceutical exports",
@@ -82,23 +72,23 @@ const ContactSection = () => {
   ];
 
   return (
-    <>
+    <div>
       {/* Main Contact Section */}
-      <section className="bg-gradient-to-br from-[#0f4c75] via-[#2e86ab] to-[#a23b72] py-20 px-4 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0A3C66] via-[#0A3C66] to-[#3A874C] py-20 px-4 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-tr from-[#a23b72]/20 to-transparent rounded-full blur-2xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-tr from-[#3A874C]/20 to-transparent rounded-full blur-2xl" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-              <Send className="h-5 w-5 text-white" />
+              <span className="text-white text-lg">📤</span>
               <span className="text-white font-semibold">Get In Touch</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Connect with Our
-              <span className="block text-transparent bg-gradient-to-r from-[#22d3ee] to-[#38bdf8] bg-clip-text">
+              <span className="block text-transparent bg-gradient-to-r from-[#3A874C] to-[#3A874C] bg-clip-text">
                 Pharmaceutical Experts
               </span>
             </h1>
@@ -114,20 +104,17 @@ const ContactSection = () => {
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Shield className="h-6 w-6 text-[#22d3ee]" />
+                  <span className="text-[#3A874C] text-2xl">🛡️</span>
                   Contact Information
                 </h2>
 
                 <div className="space-y-6">
                   {contactInfo.map(
-                    (
-                      { icon: Icon, title, value, link, description },
-                      index
-                    ) => (
+                    ({ icon, title, value, link, description }, index) => (
                       <div key={title} className="group">
                         <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20">
-                          <div className="bg-gradient-to-br from-[#22d3ee] to-[#38bdf8] p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <Icon className="h-6 w-6 text-white" />
+                          <div className="bg-gradient-to-br from-[#3A874C] to-[#3A874C] p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <span className="text-white text-xl">{icon}</span>
                           </div>
                           <div className="flex-1">
                             <h3 className="font-bold text-white text-lg mb-1">
@@ -136,7 +123,7 @@ const ContactSection = () => {
                             {link ? (
                               <a
                                 href={link}
-                                className="text-[#22d3ee] hover:text-white text-lg transition-colors duration-200 break-all block"
+                                className="text-[#3A874C] hover:text-white text-lg transition-colors duration-200 break-all block"
                                 target={
                                   title === "Email" ? "_blank" : undefined
                                 }
@@ -149,7 +136,7 @@ const ContactSection = () => {
                                 {value}
                               </a>
                             ) : (
-                              <div className="text-[#22d3ee] text-lg font-medium">
+                              <div className="text-[#3A874C] text-lg font-medium">
                                 {value}
                               </div>
                             )}
@@ -168,7 +155,7 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="flex items-center gap-3 mb-2">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                    <span className="text-[#3A874C] text-xl">✅</span>
                     <span className="text-white font-bold">
                       Licensed & Certified
                     </span>
@@ -180,7 +167,7 @@ const ContactSection = () => {
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="flex items-center gap-3 mb-2">
-                    <Clock className="h-6 w-6 text-blue-400" />
+                    <span className="text-[#3A874C] text-xl">⏱️</span>
                     <span className="text-white font-bold">Quick Response</span>
                   </div>
                   <p className="text-white/80 text-sm">
@@ -191,10 +178,10 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-blue-100">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-[#3A874C]/20">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-[#0f4c75] mb-4">
-                  Send us a<span className="text-[#2e86ab]"> Message</span>
+                <h2 className="text-3xl font-bold text-[#0A3C66] mb-4">
+                  Send us a<span className="text-[#3A874C]"> Message</span>
                 </h2>
                 <p className="text-gray-600">
                   Fill out the form below and we'll get back to you within 24
@@ -202,7 +189,7 @@ const ContactSection = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-gray-700">
@@ -214,8 +201,7 @@ const ContactSection = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       placeholder="Enter your first name"
-                      required
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                   <div className="space-y-2">
@@ -228,8 +214,7 @@ const ContactSection = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       placeholder="Enter your last name"
-                      required
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                 </div>
@@ -245,8 +230,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your@email.com"
-                      required
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                   <div className="space-y-2">
@@ -259,7 +243,7 @@ const ContactSection = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                 </div>
@@ -275,7 +259,7 @@ const ContactSection = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Your company name"
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                   <div className="space-y-2">
@@ -288,7 +272,7 @@ const ContactSection = () => {
                       value={formData.country}
                       onChange={handleInputChange}
                       placeholder="Your country"
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                     />
                   </div>
                 </div>
@@ -303,15 +287,14 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     placeholder="Tell us about your pharmaceutical requirements, quantities needed, target markets, or any specific questions you have..."
                     rows={5}
-                    required
-                    className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#2e86ab] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                    className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                   />
                 </div>
 
                 <button
-                  type="submit"
+                  onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-[#0f4c75] via-[#2e86ab] to-[#a23b72] text-white font-bold py-4 px-8 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:transform-none flex items-center justify-center gap-3"
+                  className="w-full bg-gradient-to-r from-[#0A3C66] via-[#0A3C66] to-[#3A874C] text-white font-bold py-4 px-8 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:transform-none flex items-center justify-center gap-3"
                 >
                   {isSubmitting ? (
                     <>
@@ -320,23 +303,23 @@ const ContactSection = () => {
                     </>
                   ) : (
                     <>
-                      <Send className="h-5 w-5" />
+                      <span className="text-white text-lg">📤</span>
                       Send Message
                     </>
                   )}
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Google Map Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4">
+      <section className="bg-gradient-to-br from-gray-50 to-[#3A874C]/10 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4">
-              Visit Our <span className="text-[#2e86ab]">Facility</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A3C66] mb-4">
+              Visit Our <span className="text-[#3A874C]">Facility</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Located in Khurja, Uttar Pradesh, our state-of-the-art facility
@@ -346,11 +329,11 @@ const ContactSection = () => {
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-blue-100">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#3A874C]/20">
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-[#2e86ab]" />
+                  <span className="text-[#3A874C] text-lg">📍</span>
                   <div>
-                    <div className="font-bold text-[#0f4c75] text-sm">
+                    <div className="font-bold text-[#0A3C66] text-sm">
                       Keshav Exporters
                     </div>
                     <div className="text-gray-600 text-xs">
@@ -375,7 +358,7 @@ const ContactSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

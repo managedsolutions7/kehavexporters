@@ -21,9 +21,9 @@ const Header = () => {
     typeof window !== "undefined" && window.location.pathname === href;
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-xl sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 sm:h-16 lg:h-18 py-2">
+        <div className="flex justify-between items-center h-16 sm:h-18 lg:h-20 py-3">
           {/* Logo Section */}
           <div className="flex items-center">
             <div className="relative">
@@ -31,7 +31,7 @@ const Header = () => {
                 <img
                   src="/logo.jpg"
                   alt="Keshav Exporters Logo"
-                  className="h-12 w-auto sm:h-14 lg:h-16 object-contain transition-transform duration-300 hover:scale-105"
+                  className="h-16 w-auto sm:h-18 lg:h-20 object-contain transition-all duration-300 hover:scale-110 hover:brightness-110"
                   style={{ cursor: "pointer" }}
                 />
               </Link>
@@ -40,31 +40,40 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden lg:flex items-center space-x-8"
+            className="hidden lg:flex items-center space-x-2"
             aria-label="Main navigation"
           >
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-blue-900 font-medium hover:text-blue-600 transition-all duration-300 relative group px-3 py-2${
-                  isActive(item.href) ? " underline font-bold" : ""
+                className={`relative text-[#0A3C66] font-semibold transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-wide overflow-hidden group ${
+                  isActive(item.href)
+                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
+                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-1"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 scroll={false}
               >
-                {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                <span className="relative z-10">{item.name}</span>
+                {/* Animated background overlay for hover effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] transition-all duration-300 rounded-full ${
+                    isActive(item.href)
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
+                  }`}
+                ></div>
               </Link>
             ))}
           </nav>
 
           {/* Desktop Phone Number */}
-          <div className="hidden lg:flex items-center space-x-2 bg-blue-50 border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-100 transition-all duration-300 group">
-            <Phone className="w-4 h-4 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
+          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             <a
               href="tel:+91-7900472933"
-              className="text-blue-900 font-semibold group-hover:text-blue-700 transition-colors duration-300"
+              className="font-bold text-sm tracking-wide"
               aria-label="Call us"
             >
               +91-7900472933
@@ -74,7 +83,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-blue-900 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded transition-colors duration-200"
+            className="lg:hidden text-[#0A3C66] hover:text-[#3A874C] focus:outline-none focus:ring-2 focus:ring-[#0A3C66] rounded-lg p-2 transition-all duration-200 hover:bg-gray-50"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -93,16 +102,20 @@ const Header = () => {
           id="mobile-menu"
           className={`lg:hidden transition-all duration-300 origin-top ${
             isMenuOpen
-              ? "max-h-[400px] opacity-100 visible"
+              ? "max-h-[500px] opacity-100 visible"
               : "max-h-0 opacity-0 invisible"
           } overflow-hidden`}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200 shadow-lg rounded-b-lg">
+          <div className="px-4 pt-4 pb-6 space-y-3 bg-white border-t border-gray-100 shadow-2xl rounded-b-2xl">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-3 text-blue-900 font-medium hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 rounded-md"
+                className={`block px-6 py-4 font-semibold transition-all duration-300 rounded-xl text-sm uppercase tracking-wide ${
+                  isActive(item.href)
+                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
+                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-1"
+                }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={() => setIsMenuOpen(false)}
                 scroll={false}
@@ -113,14 +126,14 @@ const Header = () => {
             ))}
 
             {/* Mobile Phone Number */}
-            <div className="px-3 py-3 mt-4 border-t border-gray-200">
+            <div className="px-6 py-4 mt-6 border-t border-gray-100">
               <a
                 href="tel:+91-7900472933"
-                className="flex items-center space-x-2 text-blue-900 font-semibold hover:text-blue-600 transition-colors duration-300"
+                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg transition-all duration-300"
                 aria-label="Call us"
               >
-                <Phone className="w-4 h-4" />
-                <span>+91-7900472933</span>
+                <Phone className="w-5 h-5" />
+                <span className="text-sm tracking-wide">+91-7900472933</span>
               </a>
             </div>
           </div>

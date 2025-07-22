@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import {
@@ -27,11 +26,10 @@ const Footer = () => {
   ];
 
   const productCategories = [
-    { name: "Pharmaceutical Products", href: "/products/pharmaceutical" },
-    { name: "Medical Devices", href: "/products/medical-devices" },
-    { name: "Healthcare Equipment", href: "/products/healthcare" },
-    { name: "Laboratory Supplies", href: "/products/laboratory" },
-    { name: "Surgical Instruments", href: "/products/surgical" },
+    { name: "Paracetamol 500mg Tablets", href: "/products/1" },
+    { name: "Amlodipine 5mg Tablets", href: "/products/2" },
+    { name: "Azithromycin 250/500mg Tablets", href: "/products/3" },
+    { name: "Norfloxacin + Tinidazole Tablets", href: "/products/4" },
   ];
 
   const socialLinks = [
@@ -149,9 +147,14 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-green-400 flex-shrink-0" />
-                <address className="text-blue-200 text-sm leading-relaxed not-italic">
+                <a
+                  href="https://www.google.com/maps/place/Khurja,+Uttar+Pradesh,+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-200 text-sm leading-relaxed not-italic hover:text-white underline transition-colors duration-200"
+                >
                   Khurja, Uttar Pradesh, India
-                </address>
+                </a>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-green-400" />
@@ -212,13 +215,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 text-blue-300">
               <Link
-                href="/privacy"
+                href="/privacypolicy"
                 className="hover:text-white transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href="/privacypolicy"
                 className="hover:text-white transition-colors duration-300"
               >
                 Terms of Service

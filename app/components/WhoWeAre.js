@@ -1,12 +1,6 @@
+"use client";
 import React from "react";
-import {
-  Shield,
-  Globe,
-  Award,
-  Heart,
-  CheckCircle,
-  Building,
-} from "lucide-react";
+import { Shield, Globe, Award, Heart, CheckCircle } from "lucide-react";
 
 const WhoWeAre = () => {
   return (
@@ -19,7 +13,7 @@ const WhoWeAre = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image Section */}
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#2563eb] to-[#38bdf8] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <img
               src="https://images.pexels.com/photos/3652097/pexels-photo-3652097.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Keshav Exporters pharmaceutical facility"
@@ -29,9 +23,9 @@ const WhoWeAre = () => {
             {/* Floating credential badges */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-4 border border-blue-100">
               <div className="flex items-center space-x-2">
-                <Shield className="h-6 w-6 text-[#2563eb]" />
+                <Shield className="h-6 w-6 text-[#0A3C66]" />
                 <div>
-                  <div className="text-sm font-bold text-[#1A3A5A]">
+                  <div className="text-sm font-bold text-[#0A3C66]">
                     Licensed & Certified
                   </div>
                   <div className="text-xs text-gray-500">
@@ -46,11 +40,11 @@ const WhoWeAre = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               {/* <div className="inline-block">
-                <span className="bg-gradient-to-r from-[#2563eb] to-[#38bdf8] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                <span className="bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                   Established in Khurja, UP, India
                 </span>
               </div> */}
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1A3A5A] leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0A3C66] leading-tight">
                 Who We Are
               </h2>
             </div>
@@ -58,13 +52,13 @@ const WhoWeAre = () => {
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
                 We are{" "}
-                <span className="font-semibold text-[#2563eb]">
+                <span className="font-semibold text-[#0A3C66]">
                   Keshav Exporters
                 </span>
                 , a dedicated pharmaceutical export company based in Khurja,
                 Uttar Pradesh, India. Our mission is simple: to deliver quality
                 Indian medicines to global markets with{" "}
-                <span className="font-semibold text-[#1A3A5A]">
+                <span className="font-semibold text-[#0A3C66]">
                   honesty, care, and consistency
                 </span>
                 .
@@ -72,11 +66,11 @@ const WhoWeAre = () => {
 
               <p className="text-lg text-gray-700 leading-relaxed">
                 Built on the foundation of{" "}
-                <span className="font-semibold text-[#2563eb]">
+                <span className="font-semibold text-[#0A3C66]">
                   ethics and reliability
                 </span>
                 , we are officially registered under the name{" "}
-                <span className="font-semibold text-[#1A3A5A]">
+                <span className="font-semibold text-[#0A3C66]">
                   Keshav Surgical and Medicos
                 </span>{" "}
                 and operate with all valid licenses, including Drug License and
@@ -89,11 +83,11 @@ const WhoWeAre = () => {
             {/* Key features grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               <div className="flex items-center space-x-3 bg-blue-50/50 rounded-xl p-4 border border-blue-100/50">
-                <div className="bg-[#2563eb] p-2 rounded-lg">
+                <div className="bg-[#0A3C66] p-2 rounded-lg">
                   <CheckCircle className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1A3A5A] text-sm">
+                  <div className="font-semibold text-[#0A3C66] text-sm">
                     Fully Licensed
                   </div>
                   <div className="text-xs text-gray-600">
@@ -103,11 +97,11 @@ const WhoWeAre = () => {
               </div>
 
               <div className="flex items-center space-x-3 bg-blue-50/50 rounded-xl p-4 border border-blue-100/50">
-                <div className="bg-[#38bdf8] p-2 rounded-lg">
+                <div className="bg-[#3A874C] p-2 rounded-lg">
                   <Globe className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1A3A5A] text-sm">
+                  <div className="font-semibold text-[#0A3C66] text-sm">
                     Global Reach
                   </div>
                   <div className="text-xs text-gray-600">
@@ -117,11 +111,11 @@ const WhoWeAre = () => {
               </div>
 
               <div className="flex items-center space-x-3 bg-blue-50/50 rounded-xl p-4 border border-blue-100/50">
-                <div className="bg-[#22d3ee] p-2 rounded-lg">
+                <div className="bg-[#3A874C] p-2 rounded-lg">
                   <Heart className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1A3A5A] text-sm">
+                  <div className="font-semibold text-[#0A3C66] text-sm">
                     Ethics First
                   </div>
                   <div className="text-xs text-gray-600">
@@ -131,11 +125,11 @@ const WhoWeAre = () => {
               </div>
 
               <div className="flex items-center space-x-3 bg-blue-50/50 rounded-xl p-4 border border-blue-100/50">
-                <div className="bg-[#2563eb] p-2 rounded-lg">
+                <div className="bg-[#0A3C66] p-2 rounded-lg">
                   <Award className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1A3A5A] text-sm">
+                  <div className="font-semibold text-[#0A3C66] text-sm">
                     Quality Focus
                   </div>
                   <div className="text-xs text-gray-600">
@@ -144,31 +138,6 @@ const WhoWeAre = () => {
                 </div>
               </div>
             </div>
-
-            {/* Company registration info */}
-            {/* <div className="bg-gradient-to-r from-[#f8fafc] to-[#e0f2fe]/30 rounded-2xl p-6 border border-blue-100/50 shadow-sm">
-              <div className="flex items-start space-x-4">
-                <div className="bg-white p-3 rounded-xl shadow-sm border border-blue-100">
-                  <Building className="h-6 w-6 text-[#2563eb]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#1A3A5A] mb-2">
-                    Official Registration
-                  </h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    <span className="font-semibold">Registered as:</span> Keshav
-                    Surgical and Medicos
-                    <br />
-                    <span className="font-semibold">Location:</span> Khurja,
-                    Uttar Pradesh, India
-                    <br />
-                    <span className="font-semibold">Compliance:</span> All
-                    regulatory standards met with valid Drug License and Import
-                    Export Code (IEC)
-                  </p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

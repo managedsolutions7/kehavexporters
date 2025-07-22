@@ -6,7 +6,6 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/ProductCard";
-import SectionTitle from "@/components/SectionTitle";
 import { products } from "@/data/products";
 
 export default function Products() {

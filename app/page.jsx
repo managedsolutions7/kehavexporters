@@ -8,13 +8,7 @@ import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/SectionTitle";
 import PharmaceuticalImpactSection from "@/components/PharmaceuticalImpactSection";
 import { products } from "@/data/products";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+import HeroSection from "@/components/HeroSection";
 import MyClients from "@/components/MyClients";
 import WhoWeAre from "@/components/WhoWeAre";
 export default function Home() {
@@ -23,53 +17,7 @@ export default function Home() {
   return (
     <div className="bg-[#F8F9FA]">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Pharmaceutical facility"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-[#1A3A5A]/70" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
-            Delivering Health, Globally
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
-          >
-            Premium pharmaceutical exports from India to the world, ensuring
-            quality healthcare reaches every corner of the globe.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#348E4E] hover:bg-[#348E4E]/90 text-white text-lg px-8 py-3"
-            >
-              <Link href="#products" className="inline-flex items-center">
-                Explore Our Products
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
+      <HeroSection />
       {/* Category Section */}
       <section id="categories" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +91,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
       <WhoWeAre />
       <PharmaceuticalImpactSection />
       <MyClients />
