@@ -31,7 +31,7 @@ const Header = () => {
                 <img
                   src="/logo.jpg"
                   alt="Keshav Exporters Logo"
-                  className="h-16 w-auto sm:h-18 lg:h-20 object-contain transition-all duration-300 hover:scale-110 hover:brightness-110"
+                  className="h-16 w-auto sm:h-18 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
                   style={{ cursor: "pointer" }}
                 />
               </Link>
@@ -47,30 +47,22 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-[#0A3C66] font-semibold transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-wide overflow-hidden group ${
+                className={`relative text-[#0A3C66] font-semibold transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-wide ${
                   isActive(item.href)
-                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-1"
+                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg transform translate-y-0"
+                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:transform hover:-translate-y-0.5"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 scroll={false}
               >
-                <span className="relative z-10">{item.name}</span>
-                {/* Animated background overlay for hover effect */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] transition-all duration-300 rounded-full ${
-                    isActive(item.href)
-                      ? "opacity-100 scale-100"
-                      : "opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-                  }`}
-                ></div>
+                {item.name}
               </Link>
             ))}
           </nav>
 
           {/* Desktop Phone Number */}
-          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:transform hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+            <Phone className="w-5 h-5 group-hover:rotate-6 transition-transform duration-300" />
             <a
               href="tel:+91-7900472933"
               className="font-bold text-sm tracking-wide"
@@ -83,7 +75,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-[#0A3C66] hover:text-[#3A874C] focus:outline-none focus:ring-2 focus:ring-[#0A3C66] rounded-lg p-2 transition-all duration-200 hover:bg-gray-50"
+            className="lg:hidden text-[#0A3C66] hover:text-[#3A874C] focus:outline-none focus:ring-2 focus:ring-[#0A3C66] rounded-lg p-2 transition-all duration-200 hover:bg-gray-50 active:scale-95"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -114,7 +106,7 @@ const Header = () => {
                 className={`block px-6 py-4 font-semibold transition-all duration-300 rounded-xl text-sm uppercase tracking-wide ${
                   isActive(item.href)
                     ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-1"
+                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:transform hover:-translate-y-0.5"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={() => setIsMenuOpen(false)}
@@ -129,7 +121,7 @@ const Header = () => {
             <div className="px-6 py-4 mt-6 border-t border-gray-100">
               <a
                 href="tel:+91-7900472933"
-                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg transition-all duration-300"
+                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg hover:transform hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
                 aria-label="Call us"
               >
                 <Phone className="w-5 h-5" />
