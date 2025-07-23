@@ -18,8 +18,7 @@ export const products = [
     description:
       "Each tablet contains: Amlodipine Besylate equivalent to Amlodipine 5mg",
     category: "Cardiac Care",
-    detailedInfo:
-      "Used for the treatment of high blood pressure and coronary artery disease.",
+    detailedInfo: "used in the treatment of hypertension and angina .",
     packaging: "10 x 10 Tablets / Blister Pack",
     hsCode: "30049099",
   },

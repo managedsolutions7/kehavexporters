@@ -78,21 +78,21 @@ const HeroSection = () => {
         </div>
       </div>
       <div
-        className="absolute top-32 right-16 animate-bounce"
+        className="absolute top-20 right-16 animate-pulse"
         style={{ animationDelay: "1s" }}
       >
         <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-white/30">
           <Globe className="h-8 w-8 text-white" />
         </div>
       </div>
-      <div
-        className="absolute bottom-32 left-20 animate-pulse"
+      {/* <div
+        className="hidden md:block absolute bottom-32 left-10 animate-pulse"
         style={{ animationDelay: "2s" }}
       >
         <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-white/30">
           <Award className="h-8 w-8 text-white" />
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
