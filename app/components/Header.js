@@ -15,8 +15,6 @@ const Header = () => {
     { name: "Certificates", href: "/certificates" },
   ];
 
-  // Helper for current route (improve with usePathname in App Router!)
-  // Here it's basic; for full functionality, use `const pathname = usePathname()` from 'next/navigation'
   const isActive = (href) =>
     typeof window !== "undefined" && window.location.pathname === href;
 
@@ -24,12 +22,12 @@ const Header = () => {
     <header className="bg-white shadow-xl sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-18 lg:h-20 py-3">
-          {/* Logo Section */}
+          {/* Logo */}
           <div className="flex items-center">
             <div className="relative">
               <Link href="/">
                 <img
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Keshav Exporters Logo"
                   className="h-16 w-auto sm:h-18 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
                   style={{ cursor: "pointer" }}
@@ -38,7 +36,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav
             className="hidden lg:flex items-center space-x-2"
             aria-label="Main navigation"
@@ -49,8 +47,8 @@ const Header = () => {
                 href={item.href}
                 className={`relative text-[#0A3C66] font-semibold transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-wide ${
                   isActive(item.href)
-                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg transform translate-y-0"
-                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:transform hover:-translate-y-0.5"
+                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg translate-y-0"
+                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-0.5"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 scroll={false}
@@ -60,8 +58,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Phone Number */}
-          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:transform hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+          {/* Desktop Phone */}
+          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
             <Phone className="w-5 h-5 group-hover:rotate-6 transition-transform duration-300" />
             <a
               href="tel:+91-7900472933"
@@ -89,7 +87,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Nav */}
         <div
           id="mobile-menu"
           className={`lg:hidden transition-all duration-300 origin-top ${
@@ -106,7 +104,7 @@ const Header = () => {
                 className={`block px-6 py-4 font-semibold transition-all duration-300 rounded-xl text-sm uppercase tracking-wide ${
                   isActive(item.href)
                     ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:transform hover:-translate-y-0.5"
+                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-0.5"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={() => setIsMenuOpen(false)}
@@ -117,11 +115,11 @@ const Header = () => {
               </Link>
             ))}
 
-            {/* Mobile Phone Number */}
+            {/* Mobile Phone */}
             <div className="px-6 py-4 mt-6 border-t border-gray-100">
               <a
                 href="tel:+91-7900472933"
-                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg hover:transform hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
                 aria-label="Call us"
               >
                 <Phone className="w-5 h-5" />

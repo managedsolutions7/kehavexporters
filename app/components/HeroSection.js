@@ -72,19 +72,23 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 animate-pulse">
+      {/* Left Icon - Hidden on small screens */}
+      <div className="hidden lg:block absolute top-20 left-10 animate-pulse">
         <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-white/30">
           <Shield className="h-8 w-8 text-white" />
         </div>
       </div>
+
+      {/* Right Icon - Hidden on small screens */}
       <div
-        className="absolute top-20 right-16 animate-pulse"
+        className="hidden lg:block absolute top-20 right-16 animate-pulse"
         style={{ animationDelay: "1s" }}
       >
         <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-white/30">
           <Globe className="h-8 w-8 text-white" />
         </div>
       </div>
+
       {/* <div
         className="hidden md:block absolute bottom-32 left-10 animate-pulse"
         style={{ animationDelay: "2s" }}

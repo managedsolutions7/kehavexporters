@@ -6,6 +6,7 @@ const ContactSection = () => {
     firstName: "",
     lastName: "",
     email: "",
+    countryCode: "+",
     phone: "",
     company: "",
     country: "",
@@ -22,8 +23,23 @@ const ContactSection = () => {
     }));
   };
 
+  // Check if all required fields are filled
+  const isFormValid = () => {
+    return (
+      formData.firstName.trim() !== "" &&
+      formData.lastName.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.message.trim() !== ""
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!isFormValid()) {
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -34,6 +50,7 @@ const ContactSection = () => {
       firstName: "",
       lastName: "",
       email: "",
+      countryCode: "+91",
       phone: "",
       company: "",
       country: "",
@@ -202,6 +219,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="Enter your first name"
                       className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
@@ -215,6 +233,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="Enter your last name"
                       className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      required
                     />
                   </div>
                 </div>
@@ -231,20 +250,31 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="your@email.com"
                       className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-gray-700">
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
-                    />
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        name="countryCode"
+                        value={formData.countryCode}
+                        onChange={handleInputChange}
+                        placeholder="+91"
+                        className="w-20 p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white text-center flex-shrink-0"
+                      />
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="1234567890"
+                        className="flex-1 min-w-0 p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -288,13 +318,18 @@ const ContactSection = () => {
                     placeholder="Tell us about your pharmaceutical requirements, quantities needed, target markets, or any specific questions you have..."
                     rows={5}
                     className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                    required
                   />
                 </div>
 
                 <button
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-[#0A3C66] via-[#0A3C66] to-[#3A874C] text-white font-bold py-4 px-8 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:transform-none flex items-center justify-center gap-3"
+                  type="submit"
+                  disabled={isSubmitting || !isFormValid()}
+                  className={`w-full font-bold py-4 px-8 rounded-xl transition-all duration-300 transform flex items-center justify-center gap-3 ${
+                    isFormValid() && !isSubmitting
+                      ? "bg-gradient-to-r from-[#0A3C66] via-[#0A3C66] to-[#3A874C] text-white hover:shadow-xl hover:-translate-y-1"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
                 >
                   {isSubmitting ? (
                     <>
@@ -303,8 +338,10 @@ const ContactSection = () => {
                     </>
                   ) : (
                     <>
-                      <span className="text-white text-lg">📤</span>
-                      Send Message
+                      <span className="text-lg">📤</span>
+                      {isFormValid()
+                        ? "Send Message"
+                        : "Please fill all required fields"}
                     </>
                   )}
                 </button>

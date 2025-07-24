@@ -69,7 +69,7 @@ const Footer = () => {
               <img
                 src="/logo.jpg"
                 alt="Keshav Exporters Logo"
-                className="h-12 w-auto object-contain mr-3"
+                className="h-16 w-auto object-contain mr-3"
               />
               <div>
                 <h3 className="text-xl font-bold">KESHAV</h3>
