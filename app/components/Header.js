@@ -29,7 +29,7 @@ const Header = () => {
                 <img
                   src="/logo.png"
                   alt="Keshav Exporters Logo"
-                  className="h-16 w-auto sm:h-18 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
+                  className="h-16 w-auto sm:h-18 lg:h-20 object-contain hover:opacity-80 transition-opacity duration-200"
                   style={{ cursor: "pointer" }}
                 />
               </Link>
@@ -45,10 +45,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-[#0A3C66] font-semibold transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-wide ${
+                className={`relative text-[#0A3C66] font-semibold px-6 py-3 rounded-full text-sm uppercase tracking-wide transition-colors duration-200 ${
                   isActive(item.href)
-                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg translate-y-0"
-                    : "hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-0.5"
+                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
+                    : "hover:text-[#3A874C]"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 scroll={false}
@@ -59,8 +59,8 @@ const Header = () => {
           </nav>
 
           {/* Desktop Phone */}
-          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
-            <Phone className="w-5 h-5 group-hover:rotate-6 transition-transform duration-300" />
+          <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white rounded-full px-6 py-3 cursor-pointer hover:opacity-90 transition-opacity duration-200">
+            <Phone className="w-5 h-5" />
             <a
               href="tel:+91-7900472933"
               className="font-bold text-sm tracking-wide"
@@ -73,7 +73,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-[#0A3C66] hover:text-[#3A874C] focus:outline-none focus:ring-2 focus:ring-[#0A3C66] rounded-lg p-2 transition-all duration-200 hover:bg-gray-50 active:scale-95"
+            className="lg:hidden text-[#0A3C66] focus:outline-none focus:ring-2 focus:ring-[#0A3C66] rounded-lg p-2 hover:text-[#3A874C] transition-colors duration-200"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -101,10 +101,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-6 py-4 font-semibold transition-all duration-300 rounded-xl text-sm uppercase tracking-wide ${
+                className={`block px-6 py-4 font-semibold rounded-xl text-sm uppercase tracking-wide transition-colors duration-200 ${
                   isActive(item.href)
                     ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "text-[#0A3C66] hover:bg-gradient-to-r hover:from-[#0A3C66] hover:to-[#3A874C] hover:text-white hover:shadow-lg hover:-translate-y-0.5"
+                    : "text-[#0A3C66] hover:text-[#3A874C]"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={() => setIsMenuOpen(false)}
@@ -119,7 +119,7 @@ const Header = () => {
             <div className="px-6 py-4 mt-6 border-t border-gray-100">
               <a
                 href="tel:+91-7900472933"
-                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95"
+                className="flex items-center space-x-3 text-white font-bold bg-gradient-to-r from-[#0A3C66] to-[#3A874C] px-6 py-4 rounded-xl hover:opacity-90 transition-opacity duration-200"
                 aria-label="Call us"
               >
                 <Phone className="w-5 h-5" />

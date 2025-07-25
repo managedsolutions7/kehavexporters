@@ -1,13 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {
-  ChevronRight,
-  Play,
-  Shield,
-  Globe,
-  Award,
-  ArrowDown,
-} from "lucide-react";
+import { ChevronRight, Shield, Globe, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
