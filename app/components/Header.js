@@ -15,9 +15,6 @@ const Header = () => {
     { name: "Certificates", href: "/certificates" },
   ];
 
-  const isActive = (href) =>
-    typeof window !== "undefined" && window.location.pathname === href;
-
   return (
     <header className="bg-white shadow-xl sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,13 +42,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-[#0A3C66] font-semibold px-6 py-3 rounded-full text-sm uppercase tracking-wide transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "hover:text-[#3A874C]"
-                }`}
-                aria-current={isActive(item.href) ? "page" : undefined}
-                scroll={false}
+                className="text-[#0A3C66] font-semibold px-6 py-3 rounded-full text-sm uppercase tracking-wide transition-colors duration-200 hover:text-[#3A874C]"
               >
                 {item.name}
               </Link>
@@ -101,12 +92,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-6 py-4 font-semibold rounded-xl text-sm uppercase tracking-wide transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? "bg-gradient-to-r from-[#0A3C66] to-[#3A874C] text-white shadow-lg"
-                    : "text-[#0A3C66] hover:text-[#3A874C]"
-                }`}
-                aria-current={isActive(item.href) ? "page" : undefined}
+                className="block px-6 py-4 font-semibold rounded-xl text-sm uppercase tracking-wide transition-colors duration-200 text-[#0A3C66] hover:text-[#3A874C]"
                 onClick={() => setIsMenuOpen(false)}
                 scroll={false}
                 tabIndex={isMenuOpen ? 0 : -1}

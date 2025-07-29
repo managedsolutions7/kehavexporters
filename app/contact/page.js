@@ -1,17 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+
+const initialFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  countryCode: "+91",
+  phone: "",
+  company: "",
+  country: "",
+  message: "",
+};
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    countryCode: "+",
-    phone: "",
-    company: "",
-    country: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -42,25 +45,42 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      countryCode: "+91",
-      phone: "",
-      company: "",
-      country: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      const result = await response.json();
+
+      if (!response.ok) {
+        // Handle errors, including rate limiting
+        throw new Error(result.error || "Something went wrong");
+      }
+
+      // Handle success
+      toast({
+        title: "Message Sent!",
+        description: result.message,
+      });
+      setFormData(initialFormData); // Reset form on success
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "An error occurred",
+        description: error.message,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
+      id: "phone",
       icon: "📞",
       title: "Phone",
       value: "+91-7900472933",
@@ -68,6 +88,7 @@ const ContactSection = () => {
       description: "Available 9 AM - 6 PM IST",
     },
     {
+      id: "email",
       icon: "✉️",
       title: "Email",
       value: "Keshavexporters123@gmail.com",
@@ -75,12 +96,14 @@ const ContactSection = () => {
       description: "We respond within 24 hours",
     },
     {
+      id: "address",
       icon: "📍",
       title: "Address",
       value: "Khurja, Uttar Pradesh, India",
       description: "Our headquarters & distribution center",
     },
     {
+      id: "global-reach",
       icon: "🌍",
       title: "Global Reach",
       value: "65+ Countries Served",
@@ -127,8 +150,8 @@ const ContactSection = () => {
 
                 <div className="space-y-6">
                   {contactInfo.map(
-                    ({ icon, title, value, link, description }, index) => (
-                      <div key={title} className="group">
+                    ({ id, icon, title, value, link, description }) => (
+                      <div key={id} className="group">
                         <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20">
                           <div className="bg-gradient-to-br from-[#3A874C] to-[#3A874C] p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                             <span className="text-white text-xl">{icon}</span>
@@ -206,13 +229,17 @@ const ContactSection = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="firstName"
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       First Name *
                     </label>
                     <input
+                      id="firstName"
                       type="text"
                       name="firstName"
                       value={formData.firstName}
@@ -223,10 +250,14 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="lastName"
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       Last Name *
                     </label>
                     <input
+                      id="lastName"
                       type="text"
                       name="lastName"
                       value={formData.lastName}
@@ -240,10 +271,14 @@ const ContactSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="email" // Corrected typo in className
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       Email Address *
                     </label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
                       value={formData.email}
@@ -254,11 +289,15 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="phone"
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       Phone Number
                     </label>
                     <div className="flex gap-2">
                       <input
+                        id="countryCode"
                         type="text"
                         name="countryCode"
                         value={formData.countryCode}
@@ -267,6 +306,7 @@ const ContactSection = () => {
                         className="w-20 p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#3A874C] focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white text-center flex-shrink-0"
                       />
                       <input
+                        id="phone"
                         type="tel"
                         name="phone"
                         value={formData.phone}
@@ -280,10 +320,14 @@ const ContactSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="company"
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       Company Name
                     </label>
                     <input
+                      id="company"
                       type="text"
                       name="company"
                       value={formData.company}
@@ -293,10 +337,14 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="country"
+                      className="text-sm font-semibold text-gray-700"
+                    >
                       Country
                     </label>
                     <input
+                      id="country"
                       type="text"
                       name="country"
                       value={formData.country}
@@ -308,10 +356,14 @@ const ContactSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">
+                  <label
+                    htmlFor="message"
+                    className="text-sm font-semibold text-gray-700"
+                  >
                     Message *
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
@@ -345,7 +397,7 @@ const ContactSection = () => {
                     </>
                   )}
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
