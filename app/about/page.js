@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Users, Target, Award, Heart, Globe, Shield, Star } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import Gallery from "../components/Gallery";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function About() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -271,6 +272,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <WhyChooseUs />
       <Gallery />
     </div>
   );

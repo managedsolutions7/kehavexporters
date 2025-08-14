@@ -11,6 +11,7 @@ import { products } from "@/data/products";
 import HeroSection from "@/components/HeroSection";
 import MyClients from "@/components/MyClients";
 import WhoWeAre from "@/components/WhoWeAre";
+import WhyChooseUs from "./components/WhyChooseUs";
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
 
@@ -92,6 +93,7 @@ export default function Home() {
       </section>
 
       <WhoWeAre />
+      <WhyChooseUs />
       <PharmaceuticalImpactSection />
       <MyClients />
     </div>
