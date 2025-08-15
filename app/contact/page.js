@@ -93,8 +93,8 @@ const ContactSection = () => {
       id: "email",
       icon: "✉️",
       title: "Email",
-      value: "Keshavexporters123@gmail.com",
-      link: "mailto:Keshavexporters123@gmail.com",
+      value: "Keshavpharmaceuticals99@gmail.com",
+      link: "mailto:Keshavpharmaceuticals99@gmail.com",
       description: "We respond within 24 hours",
     },
     {

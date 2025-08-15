@@ -53,7 +53,7 @@ const WhoWeAre = () => {
               <p className="text-lg text-gray-700 leading-relaxed">
                 We are{" "}
                 <span className="font-semibold text-[#0A3C66]">
-                  Keshav Exporters
+                  Keshav Pharmaceuticals
                 </span>
                 , a dedicated pharmaceutical export company based in Khurja,
                 Uttar Pradesh, India. Our mission is simple: to deliver quality
