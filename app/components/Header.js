@@ -24,7 +24,7 @@ const Header = () => {
             <div className="relative">
               <Link href="/">
                 <img
-                  src="/logo.png"
+                  src="/Keshavlogoheader.png"
                   alt="Keshav Exporters Logo"
                   className="h-16 w-auto sm:h-18 lg:h-20 object-contain hover:opacity-80 transition-opacity duration-200"
                   style={{ cursor: "pointer" }}

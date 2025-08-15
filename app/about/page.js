@@ -60,7 +60,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            About Keshav Exporters
+            About Keshav Pharmaceuticals
           </motion.h1>
           <motion.p
             className="text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto mb-8"
@@ -124,12 +124,12 @@ export default function About() {
             >
               <h3 className="text-2xl font-bold text-[#1A3A5A]">Our Story</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Keshav Exporters is a growing pharmaceutical export company
-                based in Khurja, Uttar Pradesh, India, focused on delivering
-                high-quality human generic medicines—including tablets, syrups,
-                and capsules—to global markets. Our mission is simple: to make
-                trusted, affordable Indian medicines accessible across the
-                world.
+                Keshav Pharmaceuticals is a growing pharmaceutical export
+                company based in Khurja, Uttar Pradesh, India, focused on
+                delivering high-quality human generic medicines—including
+                tablets, syrups, and capsules—to global markets. Our mission is
+                simple: to make trusted, affordable Indian medicines accessible
+                across the world.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 We operate under the GST-registered firm name, Keshav Surgical

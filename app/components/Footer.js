@@ -62,18 +62,18 @@ const Footer = () => {
   return (
     <footer className="bg-[#1A3A5A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img
-                src="/logo.jpg"
+                src="/Keshavlogodesign.png"
                 alt="Keshav Exporters Logo"
                 className="h-16 w-auto object-contain mr-3"
               />
               <div>
                 <h3 className="text-xl font-bold">KESHAV</h3>
-                <p className="text-sm text-blue-200">EXPORTERS</p>
+                <p className="text-sm text-blue-200">PHARMACEUTICALS</p>
               </div>
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <nav aria-label="Footer Quick Links">
+          <nav aria-label="Footer Quick Links ">
             <h4 className="text-lg font-semibold mb-6 relative">
               Quick Links
               <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-400 to-green-500 mt-1"></div>
@@ -166,12 +166,12 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-green-400" />
+                <Mail className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                 <a
-                  href="mailto:Keshavexporters123@gmail.com"
-                  className="text-blue-200 hover:text-white transition-colors duration-300"
+                  href="mailto:Keshavpharmaceuticals99@gmail.com"
+                  className="text-blue-200 hover:text-white transition-colors duration-300 break-all"
                 >
-                  Keshavexporters123@gmail.com
+                  Keshavpharmaceuticals99@gmail.com
                 </a>
               </div>
               <div className="flex items-center">
