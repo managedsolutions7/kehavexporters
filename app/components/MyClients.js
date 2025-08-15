@@ -189,7 +189,7 @@ const MyClients = () => {
   const testimonials = [
     {
       review:
-        "Keshav Exporters has revolutionized our pharmaceutical supply chain. Their commitment to quality assurance and regulatory compliance is exceptional, making them our most trusted partner.",
+        "Keshav Pharmaceutical has revolutionized our pharmaceutical supply chain. Their commitment to quality assurance and regulatory compliance is exceptional, making them our most trusted partner.",
       name: "Dr. Ayesha Khan",
       company: "MediCare Solutions",
       location: "Dubai, UAE",
@@ -210,7 +210,7 @@ const MyClients = () => {
     },
     {
       review:
-        "Our strategic partnership with Keshav Exporters has enabled remarkable business growth and enhanced our ability to serve patients across the Middle East region.",
+        "Our strategic partnership with Keshav Pharmaceutical has enabled remarkable business growth and enhanced our ability to serve patients across the Middle East region.",
       name: "Ahmed Al-Farsi",
       company: "Dubai Medical Group",
       location: "Dubai, UAE",
@@ -224,7 +224,7 @@ const MyClients = () => {
     },
     {
       review:
-        "Keshav Exporters consistently delivers on their commitments with precision and care. They are our go-to partner for all bulk pharmaceutical requirements and regulatory compliance needs.",
+        "Keshav Pharmaceutical consistently delivers on their commitments with precision and care. They are our go-to partner for all bulk pharmaceutical requirements and regulatory compliance needs.",
       name: "Dr. Rahul Sharma",
       company: "CarePlus Healthcare",
       location: "Mumbai, India",

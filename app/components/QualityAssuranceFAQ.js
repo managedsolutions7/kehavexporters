@@ -29,15 +29,15 @@ const QualityAssuranceFAQ = () => {
             <AccordionContent className="text-gray-600">
               We follow WHO-GMP (World Health Organization Good Manufacturing
               Practice) standards, ISO 9001:2015 quality management systems, and
-              maintain FDA approval for all our export products. Our
-              manufacturing processes are regularly audited by international
-              regulatory bodies.
+              maintain FDA approval for all our products. Our manufacturing
+              processes are regularly audited by international regulatory
+              bodies.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-[#1A3A5A] hover:text-[#348E4E]">
-              How do you ensure product safety during export?
+              How do you ensure product safety during transit?
             </AccordionTrigger>
             <AccordionContent className="text-gray-600">
               We use temperature-controlled packaging, secure transportation
@@ -49,13 +49,13 @@ const QualityAssuranceFAQ = () => {
 
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-[#1A3A5A] hover:text-[#348E4E]">
-              What documentation do you provide with exports?
+              What documentation do you provide with pharmaceutical?
             </AccordionTrigger>
             <AccordionContent className="text-gray-600">
               We provide comprehensive documentation including Certificate of
-              Analysis, Manufacturing License, Export License, WHO-GMP
-              Certificate, and all necessary customs documentation as per the
-              destination country's requirements.
+              Analysis, Manufacturing License, WHO-GMP Certificate, and all
+              necessary customs documentation as per the destination country's
+              requirements.
             </AccordionContent>
           </AccordionItem>
 

@@ -109,7 +109,7 @@ const ContactSection = () => {
       icon: "🌍",
       title: "Global Reach",
       value: "65+ Countries Served",
-      description: "Worldwide pharmaceutical exports",
+      description: "Worldwide pharmaceutical supply chain",
     },
   ];
 
@@ -414,7 +414,7 @@ const ContactSection = () => {
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Located in Khurja, Uttar Pradesh, our state-of-the-art facility
-              serves as the hub for our global pharmaceutical export operations.
+              serves as the hub for our global pharmaceutical operations.
             </p>
           </div>
 
@@ -425,7 +425,7 @@ const ContactSection = () => {
                   <span className="text-[#3A874C] text-lg">📍</span>
                   <div>
                     <div className="font-bold text-[#0A3C66] text-sm">
-                      Keshav Exporters
+                      Keshav Pharmaceutical
                     </div>
                     <div className="text-gray-600 text-xs">
                       Khurja, Uttar Pradesh, India
@@ -436,7 +436,7 @@ const ContactSection = () => {
             </div>
 
             <iframe
-              title="Keshav Exporters Office Location"
+              title="Keshav Pharmaceutical Office Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55940.3339395279!2d77.82276943632977!3d28.25032551579738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b1a982924198d%3A0x83ad149877993096!2sKhurja%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1663188245671!5m2!1sen!2sin"
               width="100%"
               height="500"

@@ -28,7 +28,7 @@ const QualityStandards = () => {
           {
             icon: CheckCircle,
             title: "FDA Approved",
-            description: "US Food and Drug Administration approval for export",
+            description: "US Food and Drug Administration approval",
           },
           {
             icon: Globe,

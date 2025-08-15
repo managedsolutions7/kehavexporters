@@ -16,7 +16,7 @@ const WhoWeAre = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#0A3C66] to-[#3A874C] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <img
               src="https://images.pexels.com/photos/3652097/pexels-photo-3652097.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Keshav Exporters pharmaceutical facility"
+              alt="Keshav Pharmaceutical  facility"
               className="relative w-full h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             />
 
@@ -55,9 +55,9 @@ const WhoWeAre = () => {
                 <span className="font-semibold text-[#0A3C66]">
                   Keshav Pharmaceuticals
                 </span>
-                , a dedicated pharmaceutical export company based in Khurja,
-                Uttar Pradesh, India. Our mission is simple: to deliver quality
-                Indian medicines to global markets with{" "}
+                , a dedicated pharmaceutical company based in Khurja, Uttar
+                Pradesh, India. Our mission is simple: to deliver quality Indian
+                medicines to global markets with{" "}
                 <span className="font-semibold text-[#0A3C66]">
                   honesty, care, and consistency
                 </span>
@@ -74,9 +74,9 @@ const WhoWeAre = () => {
                   Keshav Surgical and Medicos
                 </span>{" "}
                 and operate with all valid licenses, including Drug License and
-                Import Export Code (IEC). Our leadership combines decades of
-                experience and youthful energy to serve international buyers
-                with trust and professionalism.
+                IEC. Our leadership combines decades of experience and youthful
+                energy to serve international buyers with trust and
+                professionalism.
               </p>
             </div>
 

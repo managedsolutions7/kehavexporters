@@ -16,8 +16,7 @@ const galleryImages = [
     src: "/gallery-4.jpeg",
     alt: "Quality control and assurance process",
   },
-  { id: 5, src: "/gallery-5.jpeg", alt: "International client meeting" },
-  { id: 6, src: "/gallery-6.jpg", alt: "Packaging and shipping facility" },
+  { id: 5, src: "/gallery-6.jpg", alt: "Packaging and shipping facility" },
 ];
 
 export default function Gallery() {

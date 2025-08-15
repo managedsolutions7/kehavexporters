@@ -48,7 +48,7 @@ export default function About() {
         <div className="relative z-10 w-full max-w-5xl mx-auto px-4 py-20 flex flex-col items-center text-center">
           <motion.img
             src="/logo.jpg"
-            alt="Keshav Exporters Logo"
+            alt="Keshav Pharmaceutical Logo"
             className="h-20 w-auto mb-6 rounded-xl shadow-lg bg-white/80 p-2"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,8 +68,8 @@ export default function About() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Leading the way in pharmaceutical exports with integrity, quality,
-            and innovation
+            Leading the way in pharmaceutical with integrity, quality, and
+            innovation
           </motion.p>
           {/* Stats */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-3xl mx-auto">
@@ -124,19 +124,19 @@ export default function About() {
             >
               <h3 className="text-2xl font-bold text-[#1A3A5A]">Our Story</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Keshav Pharmaceuticals is a growing pharmaceutical export
-                company based in Khurja, Uttar Pradesh, India, focused on
-                delivering high-quality human generic medicines—including
-                tablets, syrups, and capsules—to global markets. Our mission is
-                simple: to make trusted, affordable Indian medicines accessible
-                across the world.
+                Keshav Pharmaceuticals is a growing pharmaceutical company based
+                in Khurja, Uttar Pradesh, India, focused on delivering
+                high-quality human generic medicines—including tablets, syrups,
+                and capsules—to global markets. Our mission is simple: to make
+                trusted, affordable Indian medicines accessible across the
+                world.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 We operate under the GST-registered firm name, Keshav Surgical
                 and Medicos, and hold all essential licenses including a valid
                 Drug License and Import Export Code (IEC). This ensures every
                 shipment complies with Indian regulatory standards and
-                international export requirements.
+                international requirements.
               </p>
             </motion.div>
           </div>
@@ -159,9 +159,9 @@ export default function About() {
                   approach to every aspect of our work.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  At Keshav Exporters, our focus is clear: quality, trust, and
-                  timely delivery. Whether fulfilling a small shipment or
-                  managing a large bulk export, we are committed to offering
+                  At Keshav Pharmaceutical, our focus is clear: quality, trust,
+                  and timely delivery. Whether fulfilling a small shipment or
+                  managing a large bulk supplies, we are committed to offering
                   genuine products, clear and honest communication, and reliable
                   service that our clients can depend on.
                 </p>
@@ -218,12 +218,12 @@ export default function About() {
               </p>
               <blockquote className="italic text-gray-700 border-l-4 border-[#348E4E] pl-4 mb-4 text-sm md:text-base">
                 Mr. Keshav Dutt Sharma serves as the guiding force behind Keshav
-                Exporters. With decades of experience in the healthcare and
+                Pharmaceutical. With decades of experience in the healthcare and
                 pharmaceutical industry, he brings deep wisdom, ethical
                 leadership, and a long-term vision to our organization. His
                 belief has always been simple yet powerful: good business is
                 built on trust, quality, and consistency—principles that
-                continue to define Keshav Exporters today.
+                continue to define Keshav Pharmaceutical today.
                 <br />
                 <br />
                 Though he prefers to stay behind the scenes, his influence is
@@ -247,10 +247,10 @@ export default function About() {
                 Director
               </p>
               <blockquote className="italic text-gray-700 border-l-4 border-[#1A3A5A] pl-4 mb-4 text-sm md:text-base">
-                As Director of Keshav Exporters, Mr. Paras Sharma brings energy,
-                dedication, and a forward-thinking mindset to the company’s
-                operations. He manages everything from daily business tasks to
-                export orders, client communication, documentation, and
+                As Director of Keshav Pharmaceutical, Mr. Paras Sharma brings
+                energy, dedication, and a forward-thinking mindset to the
+                company’s operations. He manages everything from daily business
+                tasks to export orders, client communication, documentation, and
                 compliance with a hands-on, professional approach.
                 <br />
                 <br />
@@ -267,8 +267,8 @@ export default function About() {
             Together, Mr. Keshav Dutt Sharma and Mr. Paras Sharma form a dynamic
             leadership team—balancing experience with innovation, and tradition
             with modern vision. Their combined strengths drive the company
-            forward and ensure that Keshav Exporters delivers more than just
-            medicine — we deliver commitment.
+            forward and ensure that Keshav Pharmaceutical delivers more than
+            just medicine — we deliver commitment.
           </div>
         </div>
       </section>

@@ -7,9 +7,9 @@ import { Toaster } from "./components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Keshav Exporters - Pharmaceutical Export Company",
+  title: "Keshav Pharmaceutical - Pharmaceutical Export Company",
   description:
-    "Leading pharmaceutical export company from India, delivering quality medical products globally.",
+    "Leading pharmaceutical company from India, delivering quality medical products globally.",
 };
 
 export default function RootLayout({ children }) {

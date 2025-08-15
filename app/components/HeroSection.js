@@ -11,7 +11,7 @@ const HeroSection = () => {
         "https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1920",
       title: "Delivering Health, Globally",
       subtitle:
-        "Premium pharmaceutical exports from India to the world, ensuring quality healthcare reaches every corner of the globe.",
+        "Premium pharmaceutical suppliers from India to the world, ensuring quality healthcare reaches every corner of the globe.",
     },
     {
       image:
@@ -25,7 +25,7 @@ const HeroSection = () => {
         "https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=1920",
       title: "Innovation in Healthcare",
       subtitle:
-        "Advanced pharmaceutical manufacturing and export services connecting Indian medicines to global healthcare needs.",
+        "Advanced pharmaceutical manufacturing and supply chain services connecting Indian medicines to global healthcare needs.",
     },
   ];
 

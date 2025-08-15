@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <img
                 src="/Keshavlogodesign.png"
-                alt="Keshav Exporters Logo"
+                alt="Keshav Pharmaceutical Logo"
                 className="h-16 w-auto object-contain mr-3"
               />
               <div>
@@ -77,7 +77,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Leading exporters of high-quality pharmaceutical and medical
+              Leading suppliers of high-quality pharmaceutical and medical
               products, committed to excellence and global healthcare standards.
             </p>
             <div className="space-y-3">
@@ -210,7 +210,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between text-sm">
             <p className="text-blue-300 mb-2 md:mb-0">
-              © {new Date().getFullYear()} Keshav Exporters. All rights
+              © {new Date().getFullYear()} Keshav Pharmaceutical. All rights
               reserved.
             </p>
             <div className="flex space-x-6 text-blue-300">

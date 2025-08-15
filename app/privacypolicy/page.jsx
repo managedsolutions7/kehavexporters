@@ -497,7 +497,9 @@ const PrivacyPolicy = () => {
             This privacy policy is compliant with HIPAA, FDA regulations, and
             applicable state and federal laws.
           </p>
-          <p className="mt-2">© 2025 Keshav Exporters. All rights reserved.</p>
+          <p className="mt-2">
+            © 2025 Keshav Pharmaceutical. All rights reserved.
+          </p>
         </div>
       </div>
     </div>

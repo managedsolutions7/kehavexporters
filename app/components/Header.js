@@ -25,7 +25,7 @@ const Header = () => {
               <Link href="/">
                 <img
                   src="/Keshavlogoheader.png"
-                  alt="Keshav Exporters Logo"
+                  alt="Keshav Pharmaceutical Logo"
                   className="h-16 w-auto sm:h-18 lg:h-20 object-contain hover:opacity-80 transition-opacity duration-200"
                   style={{ cursor: "pointer" }}
                 />
